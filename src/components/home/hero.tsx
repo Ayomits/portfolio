@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Button } from "../../shared/ui/button";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: -100 },
@@ -42,6 +43,21 @@ export function Hero() {
             Начинал с простеньких чат ботов, а сейчас занимаюсь Web разработкой
           </p>
         </div>
+        <motion.a
+          initial={{
+            x: -100,
+            opacity: 0,
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+          }}
+          transition={{ ease: "easeInOut", duration: 0.5, delay: 0.5 }}
+        >
+          <Button size="lg" color="primary">
+            Связаться
+          </Button>
+        </motion.a>
       </motion.div>
 
       <motion.img

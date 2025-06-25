@@ -12,7 +12,7 @@ export const Footer = () => {
         href={DISCORD_URL}
         className="bg-gradient-to-t text-2xl from-primary to-primary-active bg-clip-text text-transparent"
       >
-        Contact me
+        Связаться
       </motion.a>
       <SocialLinks />
     </footer>
