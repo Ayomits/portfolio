@@ -1,8 +1,8 @@
-import { Footer } from "./components/footer";
-import { Header } from "./components/header";
-import { Hero } from "./components/hero";
-import { Projects } from "./components/projects";
-import { Technologies } from "./components/technologies";
+import { Footer } from "./components/layout/footer";
+import { Header } from "./components/layout/header";
+import { Hero } from "./components/home/hero";
+import { Projects } from "./components/home/projects";
+import { Technologies } from "./components/home/technologies";
 
 export const App = () => {
   return (

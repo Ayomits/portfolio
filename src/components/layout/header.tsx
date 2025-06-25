@@ -1,4 +1,4 @@
-import { Logo } from "../shared/ui/logo";
+import { Logo } from "../../shared/ui/logo";
 import { SocialLinks } from "./social-links";
 
 export function Header() {

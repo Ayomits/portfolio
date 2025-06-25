@@ -5,10 +5,10 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "../shared/ui/carousel";
+} from "../../shared/ui/carousel";
 import { motion, type HTMLMotionProps } from "motion/react";
-import { cn } from "../shared/lib/cn";
-import { technologies } from "../data/technologies";
+import { cn } from "../../shared/lib/cn";
+import { technologies } from "../../data/technologies";
 
 interface TechnologyProps extends HTMLMotionProps<"div"> {
   from: string;
@@ -27,11 +27,17 @@ export function Technology({
 }: TechnologyProps) {
   return (
     <motion.div
+      viewport={{
+        once: true,
+        amount: 0.2,
+      }}
       initial={{
         opacity: 0,
+        y: 20,
       }}
-      animate={{
+      whileInView={{
         opacity: 1,
+        y: 0,
       }}
       transition={{ ease: "easeInOut", duration: 0.3 }}
       whileHover={{

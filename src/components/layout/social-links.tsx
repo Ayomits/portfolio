@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { socialLinks } from "../data/social-links";
+import { socialLinks } from "../../data/social-links";
 
 export function SocialLinks() {
   return (

@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { BiChevronRight } from "react-icons/bi";
-import { projects } from "../data/projects";
+import { projects } from "../../data/projects";
 
 interface ProjectItemProps {
   img: string;
@@ -13,6 +13,15 @@ function Project({ img, name, link }: ProjectItemProps) {
     <motion.a
       href={link}
       target="_blank"
+      viewport={{ amount: 0.2, once: true }}
+      initial={{
+        opacity: 0,
+        y: -20,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
       whileHover={{
         scale: 1.05,
       }}
@@ -20,7 +29,13 @@ function Project({ img, name, link }: ProjectItemProps) {
       className="w-full h-[7.5rem] px-8 flex items-center justify-between bg-secondary rounded-4xl hover:bg-secondary-hover active:bg-secondary-active"
     >
       <div className="flex items-center gap-3">
-        <img className="object-cover size-16 rounded-lg" src={img} loading="lazy" width={64} height={64} />
+        <img
+          className="object-cover size-16 rounded-lg"
+          src={img}
+          loading="lazy"
+          width={64}
+          height={64}
+        />
         {name}
       </div>
       <BiChevronRight className="size-8" />
@@ -28,18 +43,24 @@ function Project({ img, name, link }: ProjectItemProps) {
   );
 }
 
+const projectSectionVariants = {
+  hidden: {
+    opacity: 0,
+    y: -100,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
+
 export function Projects() {
   return (
     <motion.section
-      viewport={{ once: true }}
-      initial={{
-        opacity: 0,
-        y: -100,
-      }}
-      animate={{
-        opacity: 1,
-        y: 0,
-      }}
+      viewport={{ once: true, amount: 0.2 }}
+      variants={projectSectionVariants}
+      initial="hidden"
+      animate="visible"
       transition={{ duration: 0.5, delay: 1 }}
       className="max-w-full flex flex-col items-center gap-8"
     >

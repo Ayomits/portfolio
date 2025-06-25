@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { DISCORD_URL } from "../data/social-links";
+import { DISCORD_URL } from "../../data/social-links";
 import { SocialLinks } from "./social-links";
 
 export const Footer = () => {
