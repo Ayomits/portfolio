@@ -107,8 +107,8 @@ export function Technologies() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden lg:flex -translate-y-1/2" />
-          <CarouselNext className="hidden lg:flex -translate-y-1/2" />
+          <CarouselPrevious className="hidden size-16 lg:flex -translate-y-1/2" />
+          <CarouselNext className="hidden size-16 lg:flex -translate-y-1/2" />
         </Carousel>
       </motion.div>
     </motion.section>
