@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import { Button } from "../shared/ui/button";
 
 const sectionVariants = {
   hidden: { opacity: 0, x: -100 },
