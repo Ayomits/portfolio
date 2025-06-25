@@ -71,7 +71,14 @@ const carouselTechnologiesVariants = {
 
 export function Technologies() {
   return (
-    <motion.section className="flex flex-col items-center gap-12">
+    <motion.section
+      initial={{
+        opacity: 0,
+        y: 20,
+      }}
+      animate={{ opacity: 1, y: 0 }}
+      className="flex flex-col items-center gap-12"
+    >
       <motion.h3
         variants={carouselTechnologiesVariants}
         initial="hidden"
