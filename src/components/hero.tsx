@@ -32,19 +32,17 @@ export function Hero() {
         </motion.h1>
 
         <motion.div
-          className="flex font-normal flex-col gap-4 text-left lg:max-w-[25rem]"
+          className="flex text-foreground-active font-normal flex-col gap-4 text-left lg:max-w-[25rem]"
           variants={childVariants}
         >
           <motion.p variants={childVariants}>
-            <span className="font-bold">Фронтенд разработчик</span> с 2 годами
-            опыта в программировании
+            <span className="font-bold text-foreground">
+              Фронтенд разработчик
+            </span>{" "}
+            с 2 годами опыта в программировании
           </motion.p>
           <motion.p variants={childVariants}>
             Начинал с простеньких чат ботов, а сейчас занимаюсь Web разработкой
-          </motion.p>
-          <motion.p variants={childVariants}>
-            Есть желание поучаствовать в каком-нибудь интересном проекте, когда
-            будет больше опыта
           </motion.p>
         </motion.div>
       </div>
