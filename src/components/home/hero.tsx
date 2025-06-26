@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Button } from "../../shared/ui/button";
+import { DISCORD_URL } from "../../data/social-links";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: -100 },
@@ -44,6 +45,7 @@ export function Hero() {
           </p>
         </div>
         <motion.a
+          href={DISCORD_URL}
           initial={{
             x: -100,
             opacity: 0,
