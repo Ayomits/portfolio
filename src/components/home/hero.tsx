@@ -46,6 +46,7 @@ export function Hero() {
         </div>
         <motion.a
           href={DISCORD_URL}
+          target="_blank"
           initial={{
             x: -100,
             opacity: 0,
