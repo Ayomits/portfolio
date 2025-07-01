@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { BiChevronRight } from "react-icons/bi";
 import { projects } from "../../data/projects";
+import { fadeAnimations } from "../../shared/lib/animations/fade";
 
 interface ProjectItemProps {
   img: string;
@@ -14,14 +15,9 @@ function Project({ img, name, link }: ProjectItemProps) {
       href={link}
       target="_blank"
       viewport={{ amount: 0.2, once: true }}
-      initial={{
-        opacity: 0,
-        y: -20,
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-      }}
+      variants={fadeAnimations.fadeYDown}
+      initial="hidden"
+      whileInView="visible"
       whileHover={{
         scale: 1.05,
       }}

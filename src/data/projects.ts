@@ -1,8 +1,15 @@
-export const projects = [
+import type { Project } from "./types";
+
+export const projects: Project[] = [
   {
     name: "Animori",
     img: "/animori-logo.webp",
     link: "https://animori.onetraf.com"
+  },
+  {
+    name: "Ayocord",
+    img: "/ayocord.svg",
+    link: "https://ayocord.tech"
   },
   {
     name: "Fear",
@@ -14,4 +21,4 @@ export const projects = [
     img: "/hero.webp",
     link: "/"
   },
-]
+] as const

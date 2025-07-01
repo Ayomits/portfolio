@@ -24,8 +24,8 @@ export const Discord = forwardRef<SVGSVGElement, SVGProps<SVGSVGElement>>(
           y2="12.0021"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C4ADFF" />
-          <stop offset="1" stop-color="#BAA3FF" />
+          <stop stopColor="#C4ADFF" />
+          <stop offset="1" stopColor="#BAA3FF" />
         </linearGradient>
       </defs>
     </svg>

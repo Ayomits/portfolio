@@ -9,6 +9,7 @@ import {
 import { motion, type HTMLMotionProps } from "motion/react";
 import { cn } from "../../shared/lib/cn";
 import { technologies } from "../../data/technologies";
+import { fadeAnimations } from "../../shared/lib/animations/fade";
 
 interface TechnologyProps extends HTMLMotionProps<"div"> {
   from: string;
@@ -27,6 +28,7 @@ export function Technology({
 }: TechnologyProps) {
   return (
     <motion.div
+      variants={fadeAnimations.fadeYDown}
       viewport={{
         once: true,
         amount: 0.2,
@@ -58,29 +60,16 @@ export function Technology({
   );
 }
 
-const carouselTechnologiesVariants = {
-  hidden: {
-    opacity: 0,
-    y: -100,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-  },
-};
-
 export function Technologies() {
   return (
     <motion.section
-      initial={{
-        opacity: 0,
-        y: 20,
-      }}
-      animate={{ opacity: 1, y: 0 }}
+      variants={fadeAnimations.fadeYDown}
+      initial="hidden"
+      animate="visible"
       className="flex flex-col items-center gap-12"
     >
       <motion.h3
-        variants={carouselTechnologiesVariants}
+        variants={fadeAnimations.fadeYDown}
         initial="hidden"
         animate="visible"
         transition={{ delay: 0.9, duration: 0.5, ease: "easeInOut" }}
@@ -89,7 +78,7 @@ export function Technologies() {
         Технологии
       </motion.h3>
       <motion.div
-        variants={carouselTechnologiesVariants}
+        variants={fadeAnimations.fadeYDown}
         initial="hidden"
         animate="visible"
         transition={{ delay: 0.9, duration: 0.5, ease: "easeInOut" }}
