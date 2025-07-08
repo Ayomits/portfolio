@@ -2,6 +2,11 @@ import type { Project } from "./types";
 
 export const projects: Project[] = [
   {
+    name: "Discord together",
+    img: "/gnu.webp",
+    link: "https://github.com/RemyK888/discord-together#readme"
+  },
+  {
     name: "Animori",
     img: "/animori-logo.webp",
     link: "https://animori.onetraf.com"
