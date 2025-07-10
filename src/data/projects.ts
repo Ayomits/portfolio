@@ -17,11 +17,6 @@ export const projects: Project[] = [
     link: "https://ayocord.tech"
   },
   {
-    name: "Fear",
-    img: "/fear-logo.webp",
-    link: "https://discord.gg/feargames"
-  },
-  {
     name: "Portfolio",
     img: "/hero.webp",
     link: "/"
